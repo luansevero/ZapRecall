@@ -6,7 +6,7 @@ body{
     background-color: #fb6b6b;
     border: 1px solid #DBDBDB;
     font-family: 'Recursive', sans-serif;
-    height: 100vh;
+    height: 100%;
 }
 
 button{
@@ -71,6 +71,7 @@ div.mainPage{
     display: flex;
     flex-direction: column;
 }
+
 .recallPage .logoHeader{
     width: 100%;
     display: flex;
@@ -86,8 +87,10 @@ div.mainPage{
         width: 203px;
         height: 44px;
     }
+
 .recallPage li.card{
     margin: 12.5px auto;
+    padding-left: 15px;
     width: 300px;
     height: 65px;
     background: #FFFFFF;
@@ -96,30 +99,35 @@ div.mainPage{
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-.recallPage li.card:first-child{
-    margin-top: 0px;
-}
-.recallPage ul li.card:last-child {
-    margin-bottom: 0px;
-}   .recallPage  ul li.card h2.cardTitle{
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 19px;
-        color: #333333;
-        margin-left: 15px;
+}   .recallPage li.card:first-child{
+        margin-top: 0px;
     }
-    .recallPage ul li.card h2.cardQuestion{
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 22px;
-    }
-    .recallPage ul li.card ion-icon{
-        width: 23px;
-        height: 23px;
-        color: #333333;
-        margin-right: 15px;
-    }
+    .recallPage ul li.card:last-child {
+        margin-bottom: 0px;
+    }   .recallPage  ul li.card h2.cardTitle{
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            color: #333333;
+        }
+        .recallPage ul li.card h2.cardQuestion{
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+        }
+        .recallPage ul li.card ion-icon{
+            width: 23px;
+            height: 23px;
+            color: #333333;
+            margin-right: 15px;
+        }   .recallPage ul li.card ion-icon.forgot{
+                color: #FF3030;
+            }.recallPage ul li.card ion-icon.remembered{
+                color: #2FBE34;
+            }.recallPage ul li.card ion-icon.almost{
+                color: #FF922E;
+            }
+
 .recallPage .footer{
     position: fixed;
     bottom: 0;
