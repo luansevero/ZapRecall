@@ -9,7 +9,7 @@ export default function RecallPage(){
             <LogoHeader />
             <ul>
                 {DeckSelector().map((card, index) =>
-                    <FlashCards index={index} question={card.question} answer={card.question}/>
+                    <FlashCards index={index} question={card.question} answer={card.answer}/>
                 )}
             </ul>
             <Footer size={DeckSelector().length} userAnswer="0"/>
