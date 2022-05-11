@@ -1,6 +1,7 @@
 import LogoHeader from "./Header";
 import FlashCards from "./Flashcards";
 import DeckSelector from "./Decks/DeckSelector";
+import Footer from "./Footer";
 export default function RecallPage(){
     const deck = "react" // Para quando for pegar outros decks
     return(
@@ -11,6 +12,7 @@ export default function RecallPage(){
                     <FlashCards index={index} question={card.question} answer={card.question}/>
                 )}
             </ul>
+            <Footer size={DeckSelector().length} userAnswer="0"/>
         </div>
     )
 }

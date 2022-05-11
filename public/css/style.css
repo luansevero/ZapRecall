@@ -136,9 +136,9 @@ div.mainPage{
     background: #FFFFFF;
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px;
 }   .recallPage h2, p{
         font-weight: 400;
@@ -151,6 +151,9 @@ div.mainPage{
         display: flex;
         align-items: center;
         margin-top: 15px;
+    }
+    .footer .resultContainer.none{
+        display: none;
     }
     .recallPage .footer .resultContainer img.emoji{
         width: 23px;
@@ -165,8 +168,8 @@ div.mainPage{
         text-align: center;
         margin-top: 14px;
     }
-    .recallPage .footer .progress{
-        margin-top: 10px;
+    .recallPage .footer p.resultText.none{
+        display: none;
     }
     .recallPage .footer .progressIcons{
         height: 23px;
@@ -184,6 +187,7 @@ div.mainPage{
     .recallPage .footer .progressIcons ion-icon:last-child{
         margin-right: 0;
     }
-    .off{
+    .recallPage .footer .progressIcons.none{
         display: none;
     }
+
