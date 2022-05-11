@@ -1,16 +1,18 @@
 import React from "react";
 export default function FlashCards({index, question, answer}){
-    const [fcText, setFcText] = React.useState(`Pergunta ${index + 1}`);
+    const fcIndex = React.useState(`Pergunta ${index + 1}`)
+    const [fcText, setFcText] = React.useState(fcIndex);
     const [fcQuestion, setFcQuestion] = React.useState(question);
     const [fcAnswer, setFcAnswer] = React.useState(answer);
     const [fcClass, setFcClass] = React.useState("");
     const [fcTextClass, setFcTextClass] = React.useState("flashcardTitle");
     const [fcIcon, setFcIcon] = React.useState("play-outline");
-    const [fcIconClass, setFcIconClass] = React.useState("");
+    const [fcIconClass, setFcIconClass] = React.useState("normal");
     function FlashCardBtn(){
         if(fcIcon === "play-outline"){
             setFcText(fcQuestion);
             setFcClass("turned")
+            setFcTextClass("flashcardQuestion")
             setFcIcon("setinha")
         } if(fcIcon === "setinha"){
             setFcText(fcAnswer);
@@ -18,20 +20,32 @@ export default function FlashCards({index, question, answer}){
         }
     }
     function UserAnswer(click){
-        if(click === "não lembrei"){
-            setFcIcon("")
-            setFcIconClass("forgot")
-            setFcTextClass("")
+        if(click === "não"){
+            setFcIcon("close-circle")
+            setFcIconClass("forgoten")
+            setFcTextClass("forgoten answred")
         }
+        if(click === "quase"){
+            setFcIcon("help-circle")
+            setFcIconClass("almost")
+            setFcTextClass("almost answred")
+        }
+        if(click === "zap"){
+            setFcIcon("checkmark-circle")
+            setFcIconClass("remembered")
+            setFcTextClass("remembered answred")
+        }
+        setFcText(fcIndex)
+        setFcClass("")
     }
     return(
         <li className={"flashcard " + fcClass} key={index}>
-            <h2 className={fcClass}>{fcText}</h2>
-            <FlashCardSide fcIcon={fcIcon} fcIconClass={fcIconClass} FlashCardBtn={FlashCardBtn} />
+            <h2 className={fcTextClass}>{fcText}</h2>
+            <FlashCardSide fcIcon={fcIcon} fcIconClass={fcIconClass} FlashCardBtn={FlashCardBtn} UserAnswer={UserAnswer}/>
         </li>
     )
 }
-function FlashCardSide({index, fcText, fcQuestion, fcAnswer, fcClass, fcTextClass, fcIcon, fcIconClass, FlashCardBtn}){
+function FlashCardSide({fcIcon, fcIconClass, FlashCardBtn, UserAnswer}){
     if(fcIcon === "play-outline"){
         return (<ion-icon name={fcIcon} className={"md hydrated " + fcIconClass} onClick={FlashCardBtn}></ion-icon>)
     }if(fcIcon === "setinha"){
@@ -39,12 +53,12 @@ function FlashCardSide({index, fcText, fcQuestion, fcAnswer, fcClass, fcTextClas
     }if(fcIcon === "buttons"){
         return (
             <section className="recallButtons">
-                <button className="">Não lembrei</button>
-                <button className="">Quase não lembrei</button>
-                <button className="">Zap!</button>
+                <button onClick={() => UserAnswer("não")}>Não lembrei</button>
+                <button onClick={() => UserAnswer("quase")}>Quase não lembrei</button>
+                <button onClick={() => UserAnswer("zap")}>Zap!</button>
             </section>
         )
-    } if(fcIcon === "" || fcIcon === "" || fcIcon === ""){
-        return (<ion-icon name={fcIcon} className={"md hydrated " + fcIconClass}></ion-icon>)
+    } if(fcIcon === "close-circle" || fcIcon === "help-circle" || fcIcon === "checkmark-circle"){
+        return (<ion-icon name={fcIcon} class={"md hydrated " + fcIconClass}></ion-icon>)
     }
 }

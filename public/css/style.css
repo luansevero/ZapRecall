@@ -72,6 +72,12 @@ div.mainPage{
     display: flex;
     flex-direction: column;
 }
+.recallPage h2, p{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #333333;
+}
 
 .recallPage .logoHeader{
     width: 100%;
@@ -109,7 +115,6 @@ div.mainPage{
             background-color: #ffffd5;
             min-height: 131px;
             align-items: flex-start;
-            padding-top: 18px;
         }
         .recallPage ul li.flashcard.turned .turnContent{
             display: flex;
@@ -131,6 +136,7 @@ div.mainPage{
             font-weight: 400;
             font-size: 18px;
             line-height: 22px;
+            margin-top: 18px;
         }
         .recallPage ul li.flashcard.turned .recallButtons{
             width: 100%;
@@ -156,16 +162,24 @@ div.mainPage{
         .recallPage ul li.flashcard.turned .recallButtons button:nth-child(3){
             background-color: #2FBE34;
         }
-        .recallPage ul li.flashcard ion-icon{
+        .recallPage ul li.flashcard ion-icon {
             width: 23px;
             height: 23px;
-            color: #333333;
-        }   .recallPage ul li.flashcard ion-icon.forgot{
-                color: #FF3030;
-            }.recallPage ul li.flashcard ion-icon.remembered{
+        }   
+            .recallPage ul li.flashcard h2.remembered, 
+            .remembered{
                 color: #2FBE34;
-            }.recallPage ul li.flashcard ion-icon.almost{
-                color: #FF922E;
+            }
+            .recallPage ul li.flashcard h2.almost, 
+            .almost{
+                color: #ff922e;
+            }
+            .recallPage ul li.flashcard h2.forgoten,
+            .forgoten{
+                color: #FF3030;
+            }
+            .recallPage ul li.flashcard h2.answred{
+                text-decoration-line: line-through;
             }
 
 .recallPage .footer{
@@ -184,12 +198,7 @@ div.mainPage{
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-}   .recallPage h2, p{
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 22px;
-        color: #333333;
-    }
+}   
 
     .recallPage .footer .resultContainer{
         display: flex;
@@ -232,3 +241,6 @@ div.mainPage{
         margin-right: 0;
     }
 
+.recallPage .footer .none{
+    display: none;
+}
