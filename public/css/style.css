@@ -8,6 +8,7 @@ body{
     font-family: 'Recursive', sans-serif;
     height: 100vh;
 }
+
 button{
     background: none;
 	color: inherit;
@@ -16,9 +17,25 @@ button{
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
-}   .btn{
-        border-radius: 5px;
+}   .btn:hover{
+        cursor: pointer;
+        opacity: 0.7;
     }
+
+h1.logoTitle{
+    font-family: 'Righteous';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: -0.012em;
+    color: #FFFFFF;
+    width: 257px;
+    height: 59px;
+}
 
 /*MainPage*/
 div.mainPage{
@@ -30,23 +47,11 @@ div.mainPage{
     align-items: center;
     justify-content: space-between;
 
-}   img.zapLogo{
+}   .mainPage img.zapLogo{
         width: 136px;
         height: 161px;
     }
-    h1.logoTitle{
-        font-family: 'Righteous';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 36px;
-        line-height: 45px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        letter-spacing: -0.012em;
-        color: #FFFFFF;
-    }
-    button.startRecall{
+    .mainPage button.startRecall{
         width: 246px;
         height: 54px;
         background-color: #FFFFFF;
@@ -59,4 +64,68 @@ div.mainPage{
         text-align: center;
         color: #d70900;
     }
+
 /*RecallQuestionsPage*/
+.recallPage{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.recallPage .logoHeader{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 45px auto;
+
+}   .recallPage .logoHeader img.zapLogo{
+        width: 52px;
+        height: 60px;
+    }
+    .recallPage .logoHeader h1.logoTitle{
+        width: 203px;
+        height: 44px;
+    }
+.recallPage li.card{
+    margin: 12.5px auto;
+    width: 300px;
+    height: 65px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.recallPage li.card:first-child{
+    margin-top: 0px;
+}
+.recallPage ul li.card:last-child {
+    margin-bottom: 0px;
+}   .recallPage  ul li.card h2.cardTitle{
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        color: #333333;
+        margin-left: 15px;
+    }
+    .recallPage ul li.card h2.cardQuestion{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .recallPage ul li.card ion-icon{
+        width: 23px;
+        height: 23px;
+        color: #333333;
+        margin-right: 15px;
+    }
+.recallPage .footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: #FFFFFF;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+}
