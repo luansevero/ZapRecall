@@ -87,7 +87,7 @@ div.mainPage{
         width: 203px;
         height: 44px;
     }
-.recallPage ul li.card{
+.recallPage ul li.flashcard{
     margin: 12.5px auto;
     padding-left: 15px;
     width: 300px;
@@ -98,32 +98,32 @@ div.mainPage{
     display: flex;
     align-items: center;
     justify-content: space-between;
-}   .recallPage ul li.card:first-child{
+}   .recallPage ul li.flashcard:first-child{
         margin-top: 0px;
     }
-    .recallPage ul li.card:last-child {
+    .recallPage ul li.flashcard:last-child {
         margin-bottom: 0px;
-    }   .recallPage  ul li.card h2.cardTitle{
+    }   .recallPage  ul li.flashcard h2.flashcardTitle{
             font-weight: 700;
             font-size: 16px;
             line-height: 19px;
             color: #333333;
         }
-        .recallPage ul li.card h2.cardQuestion{
+        .recallPage ul li.flashcard h2.flashcardQuestion{
             font-weight: 400;
             font-size: 18px;
             line-height: 22px;
         }
-        .recallPage ul li.card ion-icon{
+        .recallPage ul li.flashcard ion-icon{
             width: 23px;
             height: 23px;
             color: #333333;
             margin-right: 15px;
-        }   .recallPage ul li.card ion-icon.forgot{
+        }   .recallPage ul li.flashcard ion-icon.forgot{
                 color: #FF3030;
-            }.recallPage ul li.card ion-icon.remembered{
+            }.recallPage ul li.flashcard ion-icon.remembered{
                 color: #2FBE34;
-            }.recallPage ul li.card ion-icon.almost{
+            }.recallPage ul li.flashcard ion-icon.almost{
                 color: #FF922E;
             }
 
