@@ -13,7 +13,6 @@ export default function RecallPage(){
     console.log(deckSelected)
     
     function refreshFooter(fcIcon, fcIconClass){
-        return ""
     }
 
     return(

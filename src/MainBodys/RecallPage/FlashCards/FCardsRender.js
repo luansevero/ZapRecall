@@ -1,8 +1,8 @@
 import React from "react";
 import FCardsChangeSide from "./FCardsChangeSide";
 export default function FlashCards({index, question, answer, refreshFooter}){
-    const fcIndex = React.useState(`Pergunta ${index + 1}`)
-    const [fcText, setFcText] = React.useState(fcIndex);
+    const fcQIndex = React.useState(`Pergunta ${index + 1}`)
+    const [fcText, setFcText] = React.useState(`Pergunta ${index + 1}`);
     const fcQuestion = React.useState(question);
     const fcAnswer = React.useState(answer);
     const [fcClass, setFcClass] = React.useState("");
@@ -37,7 +37,7 @@ export default function FlashCards({index, question, answer, refreshFooter}){
             setFcIconClass("remembered")
             setFcTextClass("remembered answred")
         }
-        setFcText(fcIndex)
+        setFcText(fcQIndex)
         setFcClass("")
         refreshFooter(fcIcon, fcIconClass)
     }
