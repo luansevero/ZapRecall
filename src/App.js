@@ -1,9 +1,20 @@
-import MainPage from "./WelcomePage"
-import RecallPage from "./RecallPage/RecallPage"
+import React from "react";
+import ChangeMains from "./ChangeMain";
 export default function ZapRecall(){
     return (
         <>
-            <RecallPage />
+            <VisiblePage />
         </>
     )
+}
+function VisiblePage(){
+    const [changePage, setChangePage] = React.useState(false);
+
+    function startRecall(){
+        setChangePage(true)
+    }
+
+        return(
+            <ChangeMains changePage={changePage} startRecall={startRecall}/>
+        )
 }
