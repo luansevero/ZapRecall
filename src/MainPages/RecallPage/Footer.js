@@ -1,9 +1,11 @@
 import React from "react";
-export default function Footer({size, qAnswered, answersIcons}){
+import party from "../../assets/party.png"
+import sad from "../../assets/sad.png"
+export default function Footer({size, qAnswered, answersIcons, recallLevel}){
      if(size === qAnswered){
         return(
             <div className="footer">
-                <Result answersIcons={answersIcons} size={size} qAnswered={qAnswered}/>
+                <Result answersIcons={answersIcons} size={size} qAnswered={qAnswered} recallLevel={recallLevel} />
                 <h2 className="progress margin">{qAnswered}/{size} CONCLUÍDOS</h2>
                 <Icons answersIcons={answersIcons}/>
             </div>
@@ -24,25 +26,25 @@ export default function Footer({size, qAnswered, answersIcons}){
         )
     }
 }
-function Result({answersIcons, size, qAnswered}){
+function Result({answersIcons, size, qAnswered, recallLevel}){
     let emojiName;
     let resultTitle;
     let resultText;
     if(size === qAnswered){
-        if(answersIcons.filter((e) => e.fcIconClass === "forgoten").length > 0){
+        if(answersIcons.filter((e) => e.fcIconClass === "forgoten").length > (size - recallLevel)){
             resultText = "Ainda faltam alguns... Mas não desanime!";
             resultTitle = "Putz...";
-            emojiName = "sad";
+            emojiName = sad
         } else {
             resultText = "Você não esqueceu de nenhum flashcard!";
             resultTitle = "Parabéns!";
-            emojiName = "party";
+            emojiName = party
         }
     }
     return(
         <>
             <div className="resultContainer">
-                <img className="" src={"assets/" + emojiName + ".png"} alt={emojiName}></img>
+                <img className="" src={emojiName} alt={emojiName}></img>
                 <h2 className="result">{resultTitle}</h2>
             </div>
             <p className="resultText ">{resultText}</p>
@@ -57,8 +59,4 @@ function Icons({answersIcons}){
         )}
         </div>
     )
-}
-function RetornaNada(){
-
-    return true
 }

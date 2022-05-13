@@ -39,8 +39,11 @@
     display: flex;
     align-items: center;
 }
+.mainPage input::placeholder{
+    color: #ADADAD;
+}
 .mainPage input.numberInput{
-    color:  #ADADAD;
+    color:  #FB6B6B;
 }
 .mainPage select.selectDeck{
     margin: 35px 0 7.5px;

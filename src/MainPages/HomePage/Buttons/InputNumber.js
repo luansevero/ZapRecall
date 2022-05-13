@@ -4,7 +4,7 @@ export default function InputNumber({setNumberSelected, placeholderNumberText, b
     return (
         <input type="number" className="numberInput" id="" placeholder={placeholderNumberText} disabled={btnStatus} onChange={(e) =>{
             const selectedNumber = e.target.value;
-            if(e.target.value.length > 0 && e.target.value <= limit){
+            if(e.target.value.length > 0 && e.target.value <= limit && e.target.value > 0){
             {setNumberSelected(selectedNumber)}
             Verify("zapVerify")
             } else {

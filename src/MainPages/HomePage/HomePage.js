@@ -1,5 +1,5 @@
 import "./style.css"
-import logo from "../assets/ZapRecallLogo.png"
+import logo from "../../assets/ZapRecallLogo.png"
 import React, { useState } from "react"
 import BtnStartRecall from "./Buttons/BtnStartRecall"
 import SelectDeck from "./Buttons/SelectDeck"
@@ -30,7 +30,7 @@ export default function HomePage({startRecall}){
             <h1 className="logoTitle">ZapRecall</h1>
             <SelectDeck selectClass={selectClass} setSelectClass={setSelectClass} setDeck={setDeck} Verify={Verify}/>
             <InputNumber setNumberSelected={setNumberSelected} placeholderNumberText={placeholderNumberText} btnStatus={btnStatus} Verify={Verify} limit={limit}/>
-            <BtnStartRecall click={click} startRecall={startRecall} numberSelected={numberSelected}/>
+            <BtnStartRecall click={click} startRecall={startRecall} numberSelected={numberSelected} deck={deck}/>
         </main>
     )
 }
