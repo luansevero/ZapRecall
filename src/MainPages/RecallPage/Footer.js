@@ -1,13 +1,14 @@
 import React from "react";
 import party from "../../assets/party.png"
 import sad from "../../assets/sad.png"
-export default function Footer({size, qAnswered, answersIcons, recallLevel}){
+export default function Footer({size, qAnswered, answersIcons, recallLevel, setChangePage}){
      if(size === qAnswered){
         return(
             <div className="footer">
                 <Result answersIcons={answersIcons} size={size} qAnswered={qAnswered} recallLevel={recallLevel} />
                 <h2 className="progress margin">{qAnswered}/{size} CONCLUÍDOS</h2>
                 <Icons answersIcons={answersIcons}/>
+                <BtnReset setChangePage={setChangePage} />
             </div>
         )
     }
@@ -58,5 +59,13 @@ function Icons({answersIcons}){
             <ion-icon name={i.fcIcon} class={i.fcIconClass} key={index}></ion-icon>
         )}
         </div>
+    )
+}
+function BtnReset({setChangePage}){
+    function on(){
+        setChangePage(false)
+    }
+    return(
+        <button className="restartRecall" onClick={on}>REINICIAR RECALL</button>
     )
 }

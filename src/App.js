@@ -19,6 +19,6 @@ function VisiblePage(){
     }
 
         return(
-            <ChangeMains changePage={changePage} startRecall={startRecall} selectedDeck={selectedDeck} recallLevel={recallLevel}/>
+            <ChangeMains changePage={changePage} setChangePage={setChangePage} startRecall={startRecall} selectedDeck={selectedDeck} recallLevel={recallLevel}/>
         )
 }

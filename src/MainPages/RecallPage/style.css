@@ -1,0 +1,211 @@
+.recallPage{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.recallPage h2, p{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #333333;
+}
+.recallPage .logoHeader{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 45px auto;
+
+}
+
+.recallPage .logoHeader img.zapLogo{
+    width: 52px;
+    height: 60px;
+}
+
+.recallPage .logoHeader h1.logoTitle{
+    width: 203px;
+    height: 44px;
+}
+
+.recallPage ul li.flashcard{
+    margin: 12.5px auto;
+    padding: 0 15px;
+    width: 300px;
+    height: 65px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.recallPage ul li.flashcard:first-child{
+    margin-top: 0px;
+}
+
+.recallPage ul li.flashcard:last-child {
+    margin-bottom: 0px;
+}
+
+.recallPage ul li.flashcard.turned{
+    flex-direction: column;
+    background-color: #ffffd5;
+    min-height: 131px;
+    align-items: flex-start;
+}
+
+.recallPage ul li.flashcard.turned .turnContent{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.recallPage ul li.flashcard.turned .turnContent img.turn{
+    width: 30px;
+    height: 20px;
+    margin-bottom: 5px;
+}
+
+.recallPage  ul li.flashcard h2.flashcardTitle{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #333333;
+}
+
+.recallPage ul li.flashcard h2.flashcardQuestion{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 18px;
+}
+
+.recallPage ul li.flashcard.turned .recallButtons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.recallPage ul li.flashcard.turned .recallButtons button{
+    width: 85px;
+    height: 38px;
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.recallPage ul li.flashcard.turned .recallButtons button:nth-child(1){
+    background-color: #FF3030;
+}
+
+.recallPage ul li.flashcard.turned .recallButtons button:nth-child(2){
+    background-color: #ff922f;
+}
+
+.recallPage ul li.flashcard.turned .recallButtons button:nth-child(3){
+    background-color: #2FBE34;
+}
+
+.recallPage ul li.flashcard ion-icon {
+    width: 23px;
+    height: 23px;
+} 
+
+.recallPage ul li.flashcard h2.remembered, 
+.remembered{
+    color: #2FBE34;
+}
+
+.recallPage ul li.flashcard h2.almost, 
+.almost{
+    color: #ff922e;
+}
+
+.recallPage ul li.flashcard h2.forgoten,
+.forgoten{
+   color: #FF3030;
+}
+
+.recallPage ul li.flashcard h2.answred{
+    text-decoration-line: line-through;
+}
+.recallPage .footer{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    position: sticky;
+    min-height: 70px;
+    background: #FFFFFF;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}   
+
+.recallPage .footer .resultContainer{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.recallPage .footer .resultContainer img.emoji{
+    width: 23px;
+    height: 23px;
+}
+
+.recallPage .footer .resultContainer h2.result{
+    font-weight: 700;
+    margin-left: 12px;
+}
+
+
+.recallPage .footer p.resultText{
+    width: 222px;
+    text-align: center;
+    margin-top: 14px;
+}
+
+.recallPage .footer .progress.margin{
+    margin-top: 14px;
+}
+
+.recallPage .footer .progressIcons{
+    height: 23px;    border-radius: 5px;
+    display: flex;
+    margin: 5px 0 10px 0;
+}
+
+.recallPage .footer .progressIcons ion-icon{
+    width: 23px;
+    height: 23px;
+    margin: 0 2.5px;
+}
+
+.recallPage .footer .progressIcons ion-icon:first-child{
+    margin-left: 0;
+}
+
+.recallPage .footer .progressIcons ion-icon:last-child{
+    margin-right: 0;
+} 
+.recallPage .footer button.restartRecall{
+    margin-top: 17px;
+    margin-bottom: 21px;
+    width: 167px;
+    height: 32px;
+    background-color: #FB6B6B;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}

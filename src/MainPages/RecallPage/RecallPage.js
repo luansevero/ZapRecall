@@ -1,11 +1,11 @@
 import React from "react";
-import "./sty"
+import "./style.css";
 import LogoHeader from "./Header";
 import DeckSelector from "./Decks/DeckSelector";
 import FlashCards from "./FlashCards/FCardsRender";
-import Footer from "./RecallFooter/Footer";
+import Footer from "./Footer";
 
-export default function RecallPage({selectedDeck, recallLevel}){
+export default function RecallPage({selectedDeck, recallLevel, setChangePage}){
     const deckSelected = []
     DeckSelector(selectedDeck).forEach(function(e){
         deckSelected.push({...e, btn:refreshFooter})
@@ -33,7 +33,7 @@ export default function RecallPage({selectedDeck, recallLevel}){
                     <FlashCards index={index} question={flashcard.question} answer={flashcard.answer} refreshFooter={flashcard.btn} />
                 )}
             </ul>
-            <Footer size={size} qAnswered={qAnswered} answersIcons={answersIcons} recallLevel={recallLevel} />
+            <Footer size={size} qAnswered={qAnswered} answersIcons={answersIcons} recallLevel={recallLevel} setChangePage={setChangePage} />
         </main>
     )
 }
