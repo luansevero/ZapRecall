@@ -3,16 +3,14 @@ import "./style.css";
 import LogoHeader from "./Header";
 import DeckSelector from "./Decks/DeckSelector";
 import FlashCards from "./FlashCards/FCardsRender";
-import Footer from "./Footer";
+import Footer from "./RecallPageFooter/Footer";
 
 export default function RecallPage({selectedDeck, recallLevel, setChangePage}){
     const deckSelected = []
     DeckSelector(selectedDeck).forEach(function(e){
         deckSelected.push({...e, btn:refreshFooter})
     })
-    console.log(deckSelected)
     
-
     const [qAnswered, setQAnswered] = React.useState(0);
     const [answersIcons, setAnswersIcons] = React.useState([]);
     const [resultText, setResultText] = React.useState("");

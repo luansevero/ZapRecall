@@ -1,4 +1,4 @@
-import ReactDeck from "./ReactDeck";
+import ReactDeck from "./AllDecks/ReactDeck";
 export default function DeckSelector(){
     const selectedDeck = ReactDeck()
     function Shuffle() { 

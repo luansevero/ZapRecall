@@ -1,10 +1,11 @@
 import "./style.css"
-import logo from "../../assets/ZapRecallLogo.png"
-import React, { useState } from "react"
+import logo from "../../../assets/ZapRecallLogo.png"
+import React from "react"
 import BtnStartRecall from "./Buttons/BtnStartRecall"
 import SelectDeck from "./Buttons/SelectDeck"
 import InputNumber from "./Buttons/InputNumber"
 import DeckSelector from "../RecallPage/Decks/DeckSelector"
+
 export default function HomePage({startRecall}){
    const [deck, setDeck] = React.useState("");
    const [click, setClick] = React.useState(false);
@@ -13,6 +14,7 @@ export default function HomePage({startRecall}){
    const [placeholderNumberText, setPlaceholderNumberText] = React.useState("Escolha um deck primeiro");
    const [btnStatus, setBtnStatus] = React.useState(true);
    const limit = DeckSelector(deck).length
+   
     function Verify(verify, unselect){
         if(verify === "deckVerify"){
             setPlaceholderNumberText(`Digite sua meta de zaps : 1 a ${limit}`)

@@ -1,4 +1,4 @@
-import logo from "../../assets/ZapRecallLogo.png"
+import logo from "../../../assets/ZapRecallLogo.png"
 export default function LogoHeader(){
     return(
         <div className="logoHeader">
