@@ -1,8 +1,9 @@
 import React from "react";
+import "./sty"
 import LogoHeader from "./Header";
 import DeckSelector from "./Decks/DeckSelector";
 import FlashCards from "./FlashCards/FCardsRender";
-import FCardsChangeSide from "./FlashCards/FCardsChangeSide";
+import Footer from "./RecallFooter/Footer";
 
 export default function RecallPage(){
     const deck = "react"; // Para quando for pegar outros decks
@@ -12,9 +13,17 @@ export default function RecallPage(){
     })
     console.log(deckSelected)
     
-    function refreshFooter(fcIcon, fcIconClass){
-    }
 
+    const [qAnswered, setQAnswered] = React.useState(0);
+    const [answersIcons, setAnswersIcons] = React.useState([]);
+    const [resultText, setResultText] = React.useState("");
+    const [resultTitle, setResultTitle] = React.useState("")
+    const [emojiName, setEmojiName] = React.useState("")
+    const size = deckSelected.length
+    function refreshFooter(fcIcon, fcIconClass){
+        setQAnswered(qAnswered + 1);
+        setAnswersIcons([...answersIcons, {fcIcon:fcIcon, fcIconClass:fcIconClass}]);
+    }
     return(
         <main className="recallPage">
             <LogoHeader />
@@ -23,6 +32,7 @@ export default function RecallPage(){
                     <FlashCards index={index} question={flashcard.question} answer={flashcard.answer} refreshFooter={flashcard.btn} />
                 )}
             </ul>
+            <Footer size={size} qAnswered={qAnswered} answersIcons={answersIcons}/>
         </main>
     )
 }

@@ -26,20 +26,23 @@ export default function FlashCards({index, question, answer, refreshFooter}){
             setFcIcon("close-circle")
             setFcIconClass("forgoten")
             setFcTextClass("forgoten answred")
+            refreshFooter("close-circle", "forgoten")
         }
         if(click === "quase"){
             setFcIcon("help-circle")
             setFcIconClass("almost")
             setFcTextClass("almost answred")
+            refreshFooter("help-circle", "almost")
         }
         if(click === "zap"){
             setFcIcon("checkmark-circle")
             setFcIconClass("remembered")
             setFcTextClass("remembered answred")
+            refreshFooter("checkmark-circle", "remembered")
         }
         setFcText(fcQIndex)
         setFcClass("")
-        refreshFooter(fcIcon, fcIconClass)
+        
     }
 
     return(

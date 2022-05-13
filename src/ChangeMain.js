@@ -1,8 +1,7 @@
-import MainPage from "./MainBodys/WelcomePage"
-import RecallPage from "./MainBodys/RecallPage/RecallPage"
+import HomePage from "./HomePage/HomePage"
 export default function ChangeMains({changePage, startRecall}){
     if(changePage){
-        return <RecallPage />
+        return ""
     } 
-    return  <MainPage startRecall={startRecall} />
+    return  <HomePage startRecall={startRecall} />
 }
