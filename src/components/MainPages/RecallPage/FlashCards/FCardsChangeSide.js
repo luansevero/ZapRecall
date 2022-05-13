@@ -1,9 +1,10 @@
+import turnPic from "../../../../assets/setinha.png"
 import React from "react"
 export default function FCardsChangeSide({fcIcon, fcIconClass, flashCardBtn, userAnswer, refreshFooter}){
     if(fcIcon === "play-outline"){
         return (<ion-icon name={fcIcon} className={"md hydrated " + fcIconClass} onClick={flashCardBtn}></ion-icon>)
     }if(fcIcon === "setinha"){
-        return (<div className="turnContent"><img className="turn" src="assets/setinha.png" alt="Resposta" onClick={flashCardBtn}/></div>)
+        return (<div className="turnContent"><img className="turn" src={turnPic} alt="Resposta" onClick={flashCardBtn}/></div>)
     }if(fcIcon === "buttons"){
         return (
             <section className="recallButtons">

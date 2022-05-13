@@ -1,5 +1,5 @@
 import React from "react";
-import ChangeMainsPages from "./components/ChangeMainPages";
+import ChangeMainsPages from "./components/ChangeMainPages"
 export default function ZapRecall(){
     return (
         <>
@@ -20,6 +20,6 @@ function VisiblePage(){
     }
 
         return(
-            <ChangeMainsPages changePage={changePage} startRecall={startRecall} selectedDeck={selectedDeck} recallLevel={recallLevel}/>
+            <ChangeMainsPages changePage={changePage} startRecall={startRecall} selectedDeck={selectedDeck} recallLevel={recallLevel} setChangePage={setChangePage}/>
         )
 } //Tava dando um erro quando eu colocava em ZapRecall(), então preferi não fazer o component, pois essa parte estaria nele
