@@ -16,6 +16,7 @@ export default function SelectDeck({selectClass, setDeck, setSelectClass, Verify
         }}>
             <option value="">Escolha seu Deck</option>
             <option value="react">React Deck</option>
+            <option value="damianLillard">Damian Lillard</option>
         </select>
     )
 }

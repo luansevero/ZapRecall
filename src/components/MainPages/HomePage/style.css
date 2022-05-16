@@ -1,5 +1,5 @@
 .mainPage{
-    height: calc(100vh - 2px);
+    height: calc(100vh - 3px);
     width: 100%;
     display: flex;
     flex-direction: column;

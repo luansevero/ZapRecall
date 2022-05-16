@@ -1,6 +1,12 @@
 import ReactDeck from "./AllDecks/ReactDeck";
-export default function DeckSelector(){
-    const selectedDeck = ReactDeck()
+import DLillardDeck from "./AllDecks/DamianLillard";
+export default function DeckSelector(deck){
+    let selectedDeck = []
+    if(deck === "react"){
+        selectedDeck = ReactDeck()
+    } if(deck === "damianLillard"){
+        selectedDeck = DLillardDeck()
+    }
     function Shuffle() { 
         return Math.random() - 0.5; 
     }
