@@ -2,6 +2,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .recallPage h2, p{
@@ -33,7 +34,7 @@
     margin: 12.5px auto;
     padding: 0 15px;
     width: 300px;
-    height: 65px;
+    min-height: 65px;
     background: #FFFFFF;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     display: flex;
@@ -91,12 +92,11 @@
 .recallPage ul li.flashcard.turned .recallButtons button{
     width: 85px;
     height: 38px;
-    margin-bottom: 5px;
+    margin: 5px 0px;
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
     color: #FFFFFF;
-    text-align: center;
 }
 
 .recallPage ul li.flashcard.turned .recallButtons button:nth-child(1){
@@ -135,68 +135,76 @@
     text-decoration-line: line-through;
 }
 .recallPage .footer{
+    width: 100%;
+    height: 70px;
+    margin-top: 20px;
+}
+.recallPage .footer.margin{
+    height: 220px;
+}
+.recallPage .footer .content{
+    position: fixed;
+    min-height: 70px;
+    width: 100%;
     bottom: 0;
     left: 0;
-    width: 100%;
-    position: sticky;
-    min-height: 70px;
     background: #FFFFFF;
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
-}   
+    margin-top: 0px;
+}
 
-.recallPage .footer .resultContainer{
+.recallPage .footer .content .resultContainer{
     display: flex;
     align-items: center;
     margin-top: 15px;
 }
 
-.recallPage .footer .resultContainer img.emoji{
+.recallPage .footer .content .resultContainer img.emoji{
     width: 23px;
     height: 23px;
 }
 
-.recallPage .footer .resultContainer h2.result{
+.recallPage .footer .content .resultContainer h2.result{
     font-weight: 700;
     margin-left: 12px;
 }
 
 
-.recallPage .footer p.resultText{
+.recallPage .footer .content p.resultText{
     width: 222px;
     text-align: center;
     margin-top: 14px;
 }
 
-.recallPage .footer .progress.margin{
+.recallPage .footer .content .progress.margin{
     margin-top: 14px;
 }
 
-.recallPage .footer .progressIcons{
+.recallPage .footer .content .progressIcons{
     height: 23px;    border-radius: 5px;
     display: flex;
     margin: 5px 0 10px 0;
 }
 
-.recallPage .footer .progressIcons ion-icon{
+.recallPage .footer .content .progressIcons ion-icon{
     width: 23px;
     height: 23px;
     margin: 0 2.5px;
 }
 
-.recallPage .footer .progressIcons ion-icon:first-child{
+.recallPage .footer .content .progressIcons ion-icon:first-child{
     margin-left: 0;
 }
 
-.recallPage .footer .progressIcons ion-icon:last-child{
+.recallPage .footer .content .progressIcons ion-icon:last-child{
     margin-right: 0;
 } 
-.recallPage .footer button.restartRecall{
-    margin-top: 17px;
+.recallPage .footer .content button.restartRecall{
+    margin-top: 10px;
     margin-bottom: 21px;
     width: 167px;
     height: 32px;
